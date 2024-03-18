@@ -115,7 +115,6 @@ class Navestidlo_element_predvest : public Navestidlo_element {
     // to init the default value of the predvest
     public:
         Navestidlo_element_predvest(const char* name, int deska, const Navestidlo_pin_config *config) : Navestidlo_element(name, deska, config) {
-            // TODO make this nicer
             const char* json_payload = "{\"aktualni\":\"volno\",\"opakovana\":\"stuj\"}";
             this->update_znak(json_payload, strlen(json_payload));
         }

@@ -143,7 +143,6 @@ bool handle_live_bit(void *)
     {
         if (live_bit_error)
         {
-            // TODO maybe have an array where the esp sends which leds are permissive
             map_on_leds(turn_off);
             if (TURN_ON_SERIAL) Serial.println("esp reachable again, setting permissive on navestidlo");
         }
@@ -174,7 +173,6 @@ void receiveEvent(int howMany)
         if (live_bit_error)
         {
             if (TURN_ON_SERIAL) Serial.println("esp reachable again, setting permissive on navestidlo");
-            // TODO set permissive
             map_on_leds(turn_off);
             live_bit_error = false;
         }
@@ -211,7 +209,6 @@ void navestidla_setup(uint8_t bus_address)
         Serial.begin(115200); // start serial communication at 9600bps
     }
     timer.every(LIVE_BIT_DELAY + LIVE_BIT_SLACK, handle_live_bit);
-    // TODO init the leds
     for (int i = 0; i < count_leds; i++) {
         old_buffer[i] = -1;
     }

@@ -121,7 +121,6 @@ int Znak::mqtt_znak_to_int(const char* mqtt_znak, int length) {
         }
     }
 
-    // TODO - throw an exception znak doesn't exist
     return -1;
 }
 
