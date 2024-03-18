@@ -1,0 +1,5 @@
+**/.vscode
+**/build
+**/setup.h
+**/esp_build/*
+kolejiste/tests/__pycache__/setup.cpython-310.pyc
